@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+# 6 clock for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+</filesMatch>
+# 6 clock for css and js
+<filesMatch ".(css|js)$">
+# Header set Cache-Control "no-cache, public"
+Header set Access-Control-Allow-Origin "*"
+</filesMatch>

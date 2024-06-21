@@ -1,0 +1,151 @@
+.cart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.cartsc {
+    position: absolute;
+    margin: 0 0 0 10px; 
+    top: -12px;
+    left: 17px; 
+    color: red;
+    font-size: 20px;
+}
+.cartimg {
+    width: 40px;
+    margin: 0 auto;
+}
+.aler {
+	/* display: block; */
+	align-items: center;
+	/* padding: 10px 20px; */
+	border-radius: 4px;
+	color: #3c763d;
+}
+.table {
+	width: 96%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+.main-title {
+	color: #2F2E41;
+	font-size: 44px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+/*-------------------------------------------------*/
+/* Style the tab */
+.tab {
+	margin-top: 40px;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-bottom: 10px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+	width: 220px;
+	height: 50px;
+	border: 2px solid #d0d0d0;
+	color: #6b6b6b;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 48px;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: .5s all;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	box-shadow: 3px 3px 20px #c70101;
+	border: none;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	color: #fff;
+	background-color: #c70101;
+	border: none;
+	transform: skewX(-15deg);
+}
+
+/* Style the tab content */
+.tabcontent h3 {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-content:target {
+	display: block;
+}
+
+.tab a {
+	width: 220px;
+	height: 50px;
+	border: 2px solid #d0d0d0;
+	color: #6b6b6b;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 48px;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: .5s all;
+}
+
+.tab a:hover {
+	box-shadow: 3px 3px 20px #c70101;
+	border: none;
+	color: #fff;
+	background-color: #c70101;
+	transform: skewX(-15deg);
+}
+
+.minus,
+.plus {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 1px 5px;
+}
+.good_delete, .good_buy {
+	padding: 3px;
+}
+
+#kol,
+#cena {
+	width: 40%;
+}
+
+.feed-form {
+	display: flex;
+	flex-direction: column;
+}
