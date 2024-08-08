@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <!-- <meta http-equiv="cache-control" content="no-cache"> -->
     <meta http-equiv="expires" content="0">
@@ -14,7 +15,8 @@ error_reporting(E_ALL);
     <link rel="icon" type="image/x-icon" sizes="32x32" href="favicon/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Продажа более 100 видов чая(со всего мира). Кофе более 30 видов(со всего мира). Добавки, аксессуары.">
+    <meta name="description"
+        content="Продажа более 100 видов чая(со всего мира). Кофе более 30 видов(со всего мира). Добавки, аксессуары.">
     <meta name="keywords" content="Продажа в Рогачеве чай, кофе россыпью со всего мира. Оптом и в розницу.">
     <link rel="preload" href="css/bootstrap.min.css" as="style">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,24 +26,30 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="./css/style2.css">
     <title>Чайная лавка. Рогачев. Чай, кофе со всего мира. Оптом и в розницу.</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class='header-wrap'>
-                <a href='index.php'><img class='logo-img' src='./img/logo.webp' title='Чайная лавка в Рогачеве' alt='Чайная лавка в Рогачеве' loading="lazy"></a>
+                <a href='index.php'><img class='logo-img' src='./img/logo.webp' title='Чайная лавка в Рогачеве'
+                        alt='Чайная лавка в Рогачеве' loading="lazy"></a>
                 <div class='invk'>
                     <a href='https://www.instagram.com/chay_nayalavka/' class='in' target="_blank">
-                        <img src='./img/in.svg' title='Чайная лавка в Рогачеве в инстаграмм' alt='Чайная лавка в Рогачеве в инстаграмм' loading="lazy">
+                        <img src='./img/in.svg' title='Чайная лавка в Рогачеве в инстаграмм'
+                            alt='Чайная лавка в Рогачеве в инстаграмм' loading="lazy">
                     </a>
                     <a href='viber://chat?number=%2B375256992780' class='viber'>
-                        <img src='./img/viber.svg' title='Чайная лавка в Рогачеве в вайбере' alt='Чайная лавка в Рогачеве в вайбере' loading="lazy">
+                        <img src='./img/viber.svg' title='Чайная лавка в Рогачеве в вайбере'
+                            alt='Чайная лавка в Рогачеве в вайбере' loading="lazy">
                     </a>
                     <a href='https://t.me/chay_nayalavka' class='tg'>
-                        <img src='./img/tg.svg' title='Чайная лавка в Рогачеве в телеграмм' alt='Написать в телеграмм' loading="lazy">
+                        <img src='./img/tg.svg' title='Чайная лавка в Рогачеве в телеграмм' alt='Написать в телеграмм'
+                            loading="lazy">
                     </a>
                 </div>
                 <div class='cart-super-Btn'>
-                    <div><img class='header-zn' src='./img/adr.png' alt='г. Рогачёв, ул. Богатырева 114/3' loading="lazy"></div>
+                    <div><img class='header-zn' src='./img/adr.png' alt='г. Рогачёв, ул. Богатырева 114/3'
+                            loading="lazy"></div>
                     <div class='header-adres'>
                         <p>г. Рогачёв, ул. Богатырева 114/3, </p>
                         <p>завод 'Диапроектор' мини-рынок</p>
@@ -67,7 +75,8 @@ error_reporting(E_ALL);
                 </div>
                 <form class="search">
                     <div class="search-wrapper">
-                        <input id="searchGoods" class="search-wrapper_input" type="text" aria-label="Поиск товаров" role='search' placeholder="Поиск в каталоге, например 'цейлон'">
+                        <input id="searchGoods" class="search-wrapper_input" type="text" aria-label="Поиск товаров"
+                            role='search' placeholder="Поиск в каталоге, например 'цейлон'">
                     </div>
                     <div class="search-wrap-btn">
                         <button type="submit" class="search-btn" id="search-btn" aria-label="Поиск товаров"></button>
@@ -79,7 +88,8 @@ error_reporting(E_ALL);
                     </div>
                     <div class='cart'>
                         <p class='cartsc'>0</p>
-                        <img class='cartimg' src='./img/cart.svg' alt='Cart' title="Перейти к оформлению товаров в корзине">
+                        <img class='cartimg' src='./img/cart.webp' alt='Cart'
+                            title="Перейти к оформлению товаров в корзине">
                         <p>корзина</p>
                     </div>
                 </div>
@@ -100,6 +110,10 @@ error_reporting(E_ALL);
         <section>
             <div class="container">
                 <div class="row">
+                    <nav class="breadcrumb" aria-label="breadcrumb">
+                        <a class="breadcrumb-item" href="index.php">Главная</a>
+                        <span class="breadcrumb-item active">Корзина</span>
+                    </nav>
                     <h1 class="cat">Корзина</h1>
                     <table class="table" id="table2">
                         <thead>
@@ -119,27 +133,25 @@ error_reporting(E_ALL);
                     </div>
                     <div class="price_result">
                     </div>
+                    <button id="buyAll">Купить выбраные товары</button>
                 </div>
             </div>
-            <!-- Модальный -->
-            <div id="myModal" class="modal">
+            <!-- Купить все товры в корзине -->
+            <div id="myModal1" class="modal1">
                 <!-- Модальное содержание -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
+                <div class="modal-content1">
+                    <span class="close1">&times;</span>
                     <h5>Заполните форму заявки</h5>
                     <h5>мы перезвоним вам</h5>
                     <form class="feed-form" action="card.php" method="post">
-                        <label for="modalzag">Заказ товара:</label>
-                        <input name="modalzag" id="modalzag" type="text" readonly />
-                        <label for="kol">Количество товара грамм:</label>
-                        <input name="kol" id="kol" type="text" readonly />
-                        <label for="cena">Цена товара бел. руб.:</label>
-                        <input name="cena" id="cena" type="text" readonly />
+                        <b>Заказ товара:</b>
+                        <textarea name="modalzag1" id="modalzag1" type="text" readonly rows="9" cols="60"></textarea>
                         <input name="fio" required="required" placeholder="Ваше имя" type="text" />
                         <input name="phone" required="required" placeholder="Ваш телефон" />
                         <input name="email" required="required" placeholder="Ваш E-mail" type="email" />
-                        <textarea name="adres" id="adres" required="required" placeholder="Введите адрес доставки товара" rows="3" cols="43" name="text"></textarea>
-                        <select id="mod_dost" name="modal_dost" required="required">
+                        <textarea name="adres" id="adres" required="required"
+                            placeholder="Введите адрес доставки товара" rows="3" cols="43" name="text"></textarea>
+                        <select id="mod_dost1" name="modal_dost1" required="required">
                             <option selected value="">Выберите способ доставки</option>
                             <option value="Почта">Почта</option>
                             <option value="Европочта">Европочта</option>
@@ -155,20 +167,15 @@ error_reporting(E_ALL);
                     $fio = $_POST['fio'];
                     $tel = $_POST['phone'];
                     $email = $_POST['email'];
-                    $modal_dost = $_POST['modal_dost'];
                     $adres = $_POST['adres'];
-                    $pokuptov = $_POST['modalzag'];
-                    $kol = $_POST['kol'];
-                    $cena = $_POST['cena'];
-                    $sposobdostav = $_POST['modal_dost'];
+                    $pokuptov = $_POST['modalzag1'];
+                    $sposobdostav = $_POST['modal_dost1'];
                     $fio = htmlspecialchars($fio);
                     $email = htmlspecialchars($email);
                     $tel = htmlspecialchars($tel);
                     $modal_dost = htmlspecialchars($modal_dost);
                     $adres = htmlspecialchars($adres);
                     $pokuptov = htmlspecialchars($pokuptov);
-                    $kol = htmlspecialchars($kol);
-                    $cena = htmlspecialchars($cena);
                     $sposobdostav = htmlspecialchars($sposobdostav);
                     $fio = urldecode($fio);
                     $email = urldecode($email);
@@ -176,46 +183,37 @@ error_reporting(E_ALL);
                     $modal_dost = urldecode($modal_dost);
                     $adres = urldecode($adres);
                     $pokuptov = urldecode($pokuptov);
-                    $kol = urldecode($kol);
-                    $cena = urldecode($cena);
                     $sposobdostav = urldecode($sposobdostav);
-                    $to = 'sakyri151@gmail.com'; // адрес получателя
+					$to = 'sakyri151@mail.ru'; // адрес получателя
+                    //$to = 'kaleev.fam@mail.ru'; // адрес получателя
+					//$to = 'vkaleev.fam@gmail.com'; // адрес получателя
+					//$to = 'sakyri151@gmail.com'; // адрес получателя
+                    //$to = 'test-17cbds6pe@srv1.mail-tester.com'; // адрес для тестирования отправки почты
                     $subject = 'Сообщение с сайта teaclub.by о покупке товара. '; // тема письма
                     // текст письма
                     $message = "Имя: " . $fio . "<br/>";
-                    $message .= "E-mail пользователя: " . $email . ' номер телефона ' . $tel . "<br/>";
-                    $message = "Наименование товара: " . $pokuptov . "<br/>";
-                    $message = "Количество товара: " . $kol . "<br/>";
-                    $message = "Цена товара: " . $cena . "<br/>";
-                    $message .= "Адрес покупателя: " . $adres;
-                    $message .= "Способ доставки: " . $sposobdostav;
+                    $message .= "E-mail покупателя: " . $email . ' номер телефона ' . $tel . "<br/>";
+                    $message .= "Адрес доставки: " . $adres . ' способ доставки ' . $sposobdostav . "<br/>";
+                    $message .= "Заказ: " . $pokuptov;
+                        // заголовок письма
                     $headers = "MIME-Version: 1.0\r\n";
-                    $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-                    $headers .= "From: Тестовое письмо <no-reply@test.com>\r\n"; // от кого письмо
+                    $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+                    $headers .= "From: Сообщение с сайта teaclub.by о покупке товара.\r\n"; // от кого письмо
                     if (isset($_POST['fio']) and isset($_POST['email'])) {
                         mail($to, $subject, $message, $headers);
-                        //Запись сообщения в таблицу otzk БД
-                        include('configinc.php');
+                        //Запись сообщения в таблицу  БД
+                        include ('configinc.php');
                         $datazak = date("Y-m-d H:i:s");
                         if (isset($_POST["fio"])) {
-                            $sql = mysqli_query($db, "INSERT INTO `pokup` (`fio`, `email`, `tel`, `pokup_tov`, `kol`, `cena`,`adrdost`, `datazak`, `sposobdostav`) VALUES ('{$_POST['fio']}', '{$_POST['email']}', '{$_POST['phone']}', '{$_POST['modalzag']}', '{$_POST['kol']}','{$_POST['cena']}','{$_POST['adres']}', '{$datazak}', '{$sposobdostav}')");
-                            echo "<script>
-                    setTimeout(function(){
-                         document.getElementById('tovar_kuplen').innerHTML = '$pokuptov ' +'в количестве ' +' $kol' + ' шт ' + 'на сумму' + ' $cena' + ' бел. руб.';
-                        window.location.href = 'card.php';
-                         document.getElementById('tovar_kuplen').innerHTML = '$pokuptov ' +'в количестве ' +' $kol' + ' шт ' + 'на сумму' + ' $cena' + ' бел. руб.';
-                      }, 2000);   
-                      document.getElementsByClassName('nazvCart')[0].innerHTML = 'Товар заказан!!!';
-                      document.getElementById('tovar_kuplen').innerHTML = '$pokuptov ' +'в количестве ' +' $kol' + ' шт ' + 'на сумму' + ' $cena' + ' бел. руб.';
-                     </script>";
+                            $sql = mysqli_query($db, "INSERT INTO `pokuptov` (`fio`, `email`, `tel`, `tovar`,`adrdost`, `datazak`, `sposobdostav`) VALUES ('{$_POST['fio']}', '{$_POST['email']}', '{$_POST['phone']}', '{$_POST['modalzag1']}','{$_POST['adres']}', '{$datazak}', '{$sposobdostav}')");
                         }
                         echo "<script>
                      document.querySelector('#tovar_kuplen').innerHTML =
-                     `Товар заказан!!!'$pokuptov ' +'в количестве ' +' $kol' + ' гр. '`
+                     `Товар заказан!!!'` 
+                     window.location.href = 'card.php';
                       </script>";
                         mysqli_free_result($result);
                         mysqli_close($db);
-                        echo "Товар заказан!";
                     } else {
                         echo "<div></div>";
                     }
